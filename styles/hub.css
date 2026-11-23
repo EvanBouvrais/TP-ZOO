@@ -1,0 +1,291 @@
+/*//////*/
+/* main */
+/*//////*/
+
+.bluesky {
+
+    position: relative;
+
+    background-image:
+        url("../assets/background/island.png"),
+        url("../assets/background/fish-island.png"),
+        url("../assets/background/bird-island.png"),
+        url("../assets/background/replace-island.png"),
+        url("../assets/background/blue-sky-clouds.jpg");
+
+    background-size:
+        400px auto,
+        400px auto,
+        400px auto,
+        650px auto,
+        cover;
+
+    background-position:
+        15% 70%,
+        36% 43%,
+        57% 20%,
+        95% 75%,
+        center;
+
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat;
+
+    height: 100%;
+    width: 100%;
+
+}
+
+/* Tout les animaux clickables */
+
+.clickable-animal {
+    cursor: pointer;
+}
+
+/* ground island */
+
+.tiger {
+
+    position: absolute;
+
+    width: 110px;
+    height: auto;
+
+    left: 16%;
+    top: 47%;
+
+    object-fit: contain;
+}
+
+.bear {
+
+    position: absolute;
+
+    width: 120px;
+    height: auto;
+
+    left: 25%;
+    top: 43%;
+
+    object-fit: contain;
+}
+
+/* water island */
+
+.fish {
+
+    position: absolute;
+
+    width: 110px;
+    height: auto;
+
+    left: 32%;
+    top: 30%;
+
+    object-fit: contain;
+}
+
+/* cloud island */
+
+.eagle {
+
+    position: absolute;
+
+    transform: scaleX(-1);
+
+    width: 110px;
+    height: auto;
+
+    left: 48%;
+    top: 20%;
+
+    object-fit: contain;
+}
+
+/*////////*/
+/* Footer */
+/*////////*/
+
+.redinfo {
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    height: 10vh;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background-color: red;
+    border-top: 5px solid rgb(255, 84, 84);
+    border-top-right-radius: 20px;
+
+    z-index: 1;
+
+}
+
+.redemployee {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 20vh;
+    width: 20vh;
+
+    box-sizing: border-box;
+    background-color: red;
+
+    border-top: 5px solid rgb(255, 84, 84);
+    border-top-right-radius: 50%;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.employee-circle {
+
+    width: 90%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        to bottom,
+        #285ec7 0%,
+        #3470d0 50%,
+        #5d9bea 100%
+    );
+
+}
+
+.employee-circle img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+/*////////////////*/
+/* Pop-up habitat */
+/*////////////////*/
+
+.pop-up {
+
+    position: fixed;
+
+    top: 45%;
+    left: 50%;
+
+    width: 75%;
+    min-height: 75%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 100;
+
+    border: 3px solid gold;
+    border-radius: 15px;
+
+    display: none;
+
+}
+
+.popup-content {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.close-popup {
+
+    background-color: transparent;
+    border: 0px;
+    border-radius: 5px;
+
+    color: red;
+
+    font-weight: bold;
+    font-size: 20px;
+
+    align-self: flex-end;
+
+}
+
+.close-popup:hover {
+
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+
+.habitat {
+
+
+    padding: 20px;
+
+    
+}
+
+.island {
+
+    background-image: url("../assets/background/island-popup.png");
+    background-size: cover;
+
+}
+
+.fish-island {
+
+    background-image: url("../assets/background/fish-island-popup.png");
+    background-size: cover;
+
+}
+
+.bird-island {
+
+    background-image: url("../assets/background/bird-island-popup.png");
+    background-position: center;
+
+}
+
+.pop-up.active {
+
+    display: block;
+
+}
+
+.animal-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    gap: 15px;
+
+    width: 60%;
+
+    margin: 0 auto;
+
+}
+
+.animal-card {
+
+    min-height: 230px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    border: 2px solid #000817;
+    border-radius: 10px;
+
+    padding: 10px;
+
+}
